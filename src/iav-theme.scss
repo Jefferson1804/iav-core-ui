@@ -1,0 +1,17 @@
+@use '@angular/material' as mat;
+
+$iav-primary: mat.define-palette(mat.$blue-palette, 300);
+$iav-accent: mat.define-palette(mat.$blue-gray-palette, 600);
+$iav-warn: mat.define-palette(mat.$pink-palette, 400);
+
+$iav-theme: mat.define-light-theme((
+ color: (
+   primary: $iav-primary,
+   accent: $iav-accent,
+   warn: $iav-warn,
+ ),
+ density: 0,
+));
+
+@include mat.core($iav-theme);
+@include mat.button-theme($iav-theme);
