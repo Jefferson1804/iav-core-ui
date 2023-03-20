@@ -1,1 +1,77 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+// ToDo move to seperate file as application expands
+$iav-blue-palette: (
+  50: #E1f6fb,
+  100:#B2E6F5,
+  200: #80D6F0,
+  300: #4FC6EA,
+  400: #23BAE8,
+  500: #00AEE8,
+  600: #00A0DA,
+  700: #008DC7,
+  800: #007CB4,
+  900: #005C95,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: rgba(black, 0.87),
+    400: rgba(black, 0.87),
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: rgba(black, 0.87),
+    A200: rgba(black, 0.87),
+    A400: rgba(black, 0.87),
+    A700: white,
+  )
+);
+
+$iav-blue-gray-palette: (
+50: #F0F0F0,
+100: #D5DADC,
+200: #B9C1C7,
+300: #9BA8B2,
+400: #8495A1,
+500: #6E8291,
+600: #617380,
+700: #515F69,
+800: #424C54,
+900: #30373C,
+contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: rgba(black, 0.87),
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+  )
+);
+
+$iav-core-ui-primary: mat.define-palette($iav-blue-palette, 300);
+$iav-core-ui-accent: mat.define-palette($iav-blue-gray-palette, 600);
+$iav-core-ui-warn: mat.define-palette(mat.$pink-palette, 400);
+
+$iav-core-ui-theme: mat.define-light-theme((
+  color: (
+    primary: $iav-core-ui-primary,
+    accent: $iav-core-ui-accent,
+    warn: $iav-core-ui-warn,
+  )
+));
+
+@include mat.all-component-themes($iav-core-ui-theme);
+
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
