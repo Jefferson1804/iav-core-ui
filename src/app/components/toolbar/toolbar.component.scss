@@ -1,0 +1,19 @@
+mat-toolbar#toolbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #fff;
+
+    img{
+        height: 3rem;
+        width: 6rem;
+        margin-left: 3rem;
+    }
+
+    .right{
+        button{
+            height: 1.5rem;
+        }
+    }
+}
+
